@@ -24,6 +24,7 @@ $background-opacity: 0.7;
       &::after {
         content: "";
         position: absolute;
+        overflow: hidden;
         top: 0;
         right: 0;
         width: 100%;
@@ -32,5 +33,31 @@ $background-opacity: 0.7;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Media Query Mixins
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 783px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 785px) and (max-width: 961px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 962px) {
+    @content;
   }
 }

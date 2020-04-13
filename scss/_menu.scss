@@ -52,7 +52,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -74,7 +73,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: rgba(darken($primary-color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     -webkit-transform: translate3d(0, -100%, 0);
@@ -93,7 +92,7 @@
 
   // Branding side
   &-branding {
-    background: $primary-color;
+    background: rgba($primary-color, 0.9);
     @include easeOut;
     transform: translate3d(0, 100%, 0);
     -webkit-transform: translate3d(0, 100%, 0);
@@ -112,7 +111,7 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/portrait.jpg);
+      background: url("../img/portrait.jpg");
       border-radius: 50%;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -162,7 +161,7 @@
 
 // Delay each nav item slide by 0.1s
 
-@for $x from 1 through 4 {
+@for $x from 1 through 5 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }

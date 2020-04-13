@@ -38,7 +38,7 @@ a {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
 }
 
@@ -48,7 +48,9 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
+
   .icons {
     margin-top: 1rem;
     a {
@@ -66,3 +68,118 @@ main {
     }
   }
 }
+
+// About Page
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+}
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 3px solid $secondary-color;
+}
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+.job-1 {
+  grid-area: job1;
+}
+.job-2 {
+  grid-area: job2;
+}
+.job-3 {
+  grid-area: job3;
+}
+.job {
+  background: lighten($primary-color, 5);
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 5px solid $secondary-color;
+  &-line {
+    width: 10%;
+    border-color: $secondary-color;
+  }
+}
+
+// Projects Page
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+    &:hover {
+      opacity: 0.5;
+      @include easeOut;
+      border-color: $secondary-color;
+      // box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.7);
+      // transform: translate(-0.8rem, -0.8rem);
+      // -webkit-transform: translate(-0.8rem, -0.8rem);
+      // -moz-transform: translate(-0.8rem, -0.8rem);
+      // -ms-transform: translate(-0.8rem, -0.8rem);
+      // -o-transform: translate(-0.8rem, -0.8rem);
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px solid #fff;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+// Button Style
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: $primary-color;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: #fff;
+  height: 60px;
+}
+
+@import "mobile.scss";
