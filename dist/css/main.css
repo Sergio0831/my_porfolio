@@ -274,6 +274,7 @@ main {
   grid-gap: 20px; }
   .projects img {
     width: 100%;
+    height: 300px;
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
@@ -319,8 +320,6 @@ main {
     .contact-form form input {
       height: 45px; }
       .contact-form form input::placeholder {
-        color: #fff; }
-      .contact-form form input :-moz-placeholder {
         color: #fff; }
     .contact-form form textarea::placeholder {
       color: #fff; }
