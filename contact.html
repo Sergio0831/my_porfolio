@@ -43,7 +43,7 @@
       </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- Contact Page -->
     <main id="contact">
       <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
       <h2 class="sm-heading">
@@ -57,6 +57,41 @@
         <div>
           <span class="text-secondary">Email:</span> sergejs.ivcenko@gmail.com
         </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="contact-form-handler.php" id="contact-form" method="POST">
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            placeholder="Your Name"
+            required
+          />
+          <br />
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="Your Email"
+            required
+          />
+          <br />
+          <textarea
+            name="message"
+            class="form-control"
+            placeholder="Message"
+            rows="4"
+            required
+          ></textarea>
+          <br />
+          <input
+            type="submit"
+            class="form-control submit"
+            value="SEND MESSAGE"
+          />
+        </form>
       </div>
     </main>
     <footer id="main-footer">
