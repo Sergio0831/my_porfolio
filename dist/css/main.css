@@ -288,13 +288,55 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 1rem; }
   .boxes div {
-    font-size: 2rem;
-    border: 3px solid #fff;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem; }
+    font-size: 1.5rem;
+    border-bottom: 2px solid #fff; }
+
+.contact-form {
+  text-align: center; }
+  .contact-form form {
+    display: inline-block;
+    margin-top: 50px;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    background: #5e5e5e;
+    padding: 2rem 2rem; }
+    .contact-form form .form-control {
+      width: 500px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #eece1a;
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 1rem;
+      font-family: inherit; }
+    .contact-form form input {
+      height: 45px; }
+      .contact-form form input::placeholder {
+        color: #fff; }
+      .contact-form form input :-moz-placeholder {
+        color: #fff; }
+    .contact-form form textarea::placeholder {
+      color: #fff; }
+    .contact-form form .submit {
+      background: #eece1a;
+      border-color: transparent;
+      color: #444;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 50px;
+      margin-top: 20px; }
+      .contact-form form .submit:hover {
+        background: #444;
+        color: #fff;
+        cursor: pointer; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -320,7 +362,7 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (min-width: 785px) and (max-width: 961px) {
+@media screen and (min-width: 785px) and (max-width: 1099px) {
   main {
     align-items: center;
     text-align: center; }
@@ -328,7 +370,9 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #contact .boxes {
+    flex-direction: column; } }
 
 @media screen and (max-width: 783px) {
   main {
@@ -368,7 +412,13 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #contact .boxes {
+    flex-direction: column; }
+  #contact h1 {
+    font-size: 60px; }
+  #contact .form-control {
+    width: 300px; } }
 
 @media screen and (max-width: 500px) {
   #home h1 {
@@ -388,4 +438,11 @@ main {
     font-size: 60px; }
   #contact div {
     font-size: 1rem;
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem; }
+  #contact h1 {
+    font-size: 50px; }
+  #contact .form-control {
+    width: 200px;
+    font-size: 1rem; }
+  #contact .submit {
+    font-size: 1rem; } }

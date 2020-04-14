@@ -1,8 +1,8 @@
-// 962 px >
+// 1100 px >
 @include mediaXl {
 }
 
-// 785px => 961px
+// 785px => 1099px
 @include mediaLg {
   main {
     align-items: center;
@@ -21,6 +21,11 @@
   }
   .projects {
     grid-template-columns: repeat(2, 1fr);
+  }
+  #contact {
+    .boxes {
+      flex-direction: column;
+    }
   }
 }
 
@@ -83,6 +88,17 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+  #contact {
+    .boxes {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    .form-control {
+      width: 300px;
+    }
+  }
 }
 
 // => 500px
@@ -118,6 +134,18 @@
     div {
       font-size: 1rem;
       margin-bottom: 1rem;
+    }
+  }
+  #contact {
+    h1 {
+      font-size: 50px;
+    }
+    .form-control {
+      width: 200px;
+      font-size: 1rem;
+    }
+    .submit {
+      font-size: 1rem;
     }
   }
 }

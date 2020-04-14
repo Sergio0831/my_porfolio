@@ -139,14 +139,58 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 1rem;
 
   div {
-    font-size: 2rem;
-    border: 3px solid #fff;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #fff;
+  }
+}
+// Contact Form
+.contact-form {
+  text-align: center;
+  form {
+    display: inline-block;
+    margin-top: 50px;
+    @include easeOut;
+    background: lighten($primary-color, 10);
+    padding: 2rem 2rem;
+    .form-control {
+      width: 500px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $secondary-color;
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 1rem;
+      font-family: inherit;
+    }
+    input {
+      height: 45px;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    textarea::placeholder {
+      color: #fff;
+    }
+    .submit {
+      background: $secondary-color;
+      border-color: transparent;
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 50px;
+      margin-top: 20px;
+      &:hover {
+        background: $primary-color;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
   }
 }
 
