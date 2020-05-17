@@ -1,13 +1,8 @@
 // 1100 px >
 @include mediaXl {
 }
-
 // 785px => 1099px
 @include mediaLg {
-  main {
-    align-items: center;
-    text-align: center;
-  }
   // About
   .about-info {
     grid-template-areas:
@@ -16,7 +11,6 @@
       "job1"
       "job2"
       "job3";
-
     grid-template-columns: 1fr;
   }
   .projects {
@@ -28,25 +22,19 @@
     }
   }
 }
-
 // 501px => 783px
 @include mediaMd {
   main {
-    align-items: center;
-    text-align: center;
-
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
     }
   }
-
   ul.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
-
     &.show {
       transform: translate3d(0, 0, 0);
       -webkit-transform: translate3d(0, 0, 0);
@@ -55,7 +43,6 @@
       -o-transform: translate3d(0, 0, 0);
     }
   }
-
   .menu-nav {
     height: 60vh;
     transform: translate3d(100%, 0, 0);
@@ -65,7 +52,6 @@
     -o-transform: translate3d(100%, 0, 0);
     font-size: 20px;
   }
-
   .menu-branding {
     height: 40vh;
     transform: translate3d(-100%, 0, 0);
@@ -74,7 +60,6 @@
     -ms-transform: translate3d(-100%, 0, 0);
     -o-transform: translate3d(-100%, 0, 0);
   }
-
   .about-info {
     grid-template-areas:
       "bioimage"
@@ -82,11 +67,10 @@
       "job1"
       "job2"
       "job3";
-
     grid-template-columns: 1fr;
   }
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   #contact {
     .boxes {
@@ -95,56 +79,85 @@
     h1 {
       font-size: 60px;
     }
-    .form-control {
-      width: 300px;
+    .contact-form form .form-control {
+      width: 400px;
     }
   }
 }
-
 // => 500px
 @include mediaSm {
-  #home h1 {
-    margin-top: 10vh;
-    font-size: 80px;
-    line-height: 1.2;
-  }
-  .sm-heading {
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  #about {
-    h1 {
-      font-size: 60px;
+  .menu-nav {
+    .nav-link {
+      font-size: 1.8rem;
     }
   }
-
-  #projects {
+  main#home {
     h1 {
+      margin-top: 10vh;
+      font-size: 80px;
+      line-height: 1.2;
       font-size: 60px;
+    }
+    .sm-heading {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .contact-info div {
+      font-size: 14px;
+    }
+  }
+  #about {
+    padding: 4rem 3rem;
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    .bio {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  #projects {
+    padding: 4rem 3rem;
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 1.2rem;
     }
     .projects {
       grid-template-columns: 1fr;
     }
   }
-  #contact {
+  #skills {
     h1 {
-      font-size: 60px;
+      font-size: 48px;
     }
-    div {
-      font-size: 1rem;
-      margin-bottom: 1rem;
+    .skills-section {
+      font-size: 1.2rem;
+      .skill-container {
+        height: 25px;
+      }
+      .skill {
+        span {
+          font-size: 1rem;
+        }
+      }
     }
   }
   #contact {
+    padding: 4rem 3rem;
     h1 {
-      font-size: 50px;
+      font-size: 48px;
     }
-    .form-control {
-      width: 200px;
+    h2 {
       font-size: 1rem;
     }
-    .submit {
+    .contact-form form .form-control {
+      width: 200px;
       font-size: 1rem;
     }
   }
