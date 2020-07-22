@@ -52,36 +52,20 @@
 
       <!-- Contact Form -->
       <div class="contact-form">
-        <form action="contact-form-handler.php" id="contact-form" method="POST">
-          <input
-            name="name"
-            type="text"
-            class="form-control"
-            placeholder="Your Name"
-            required
-          />
-          <br />
-          <input
-            name="email"
-            type="email"
-            class="form-control"
-            placeholder="Your Email"
-            required
-          />
-          <br />
-          <textarea
-            name="message"
-            class="form-control"
-            placeholder="Message"
-            rows="4"
-            required
-          ></textarea>
-          <br />
-          <input
-            type="submit"
-            class="form-control submit"
-            value="SEND MESSAGE"
-          />
+        <form action="">
+          <label class="form-group">
+            <input type="text" class="form-control" name="name" required />
+            <span>Your Name</span>
+          </label>
+          <label class="form-group">
+            <input type="text" class="form-control" name="email" required />
+            <span>Your Email</span>
+          </label>
+          <label class="form-group">
+            <textarea name="message" class="form-control" required></textarea>
+            <span for="">Message</span>
+          </label>
+          <a href="#" type="submit" class="submit">Send Message</a>
         </form>
       </div>
     </main>

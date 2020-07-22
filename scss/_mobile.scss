@@ -156,9 +156,16 @@
     h2 {
       font-size: 1rem;
     }
-    .contact-form form .form-control {
-      width: 200px;
-      font-size: 1rem;
+    .contact-form .form-group .form-control {
+      font-size: 12px;
+    }
+
+    .contact-form .form-group span {
+      font-size: 15px;
+    }
+
+    .contact-form .submit {
+      font-size: 12px;
     }
   }
 }

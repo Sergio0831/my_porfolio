@@ -49,10 +49,9 @@ main {
   align-items: center;
   text-align: center;
   padding: 4rem;
-  // height: 100%;
+  height: 100%;
   // min-height: calc(100vh - 60px);
   min-height: 100vh;
-
   .contact-info {
     div {
       font-size: 1.2rem;
@@ -71,6 +70,7 @@ main {
     }
   }
   &#home {
+    overflow: hidden;
     h1 {
       margin-top: 20vh;
     }
@@ -212,55 +212,83 @@ main {
     }
   }
 }
+
 // Contact Form
 #contact {
-  text-align: center;
   .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
     text-align: center;
-    form {
-      display: inline-block;
-      @include easeOut;
-      background: lighten($primary-color, 10);
-      padding: 2rem 2rem;
+    background: #00476e;
+    padding: 40px 30px;
+    border-radius: 5px;
+
+    .form-group {
+      position: relative;
+      text-align: left;
+      display: block;
+      margin-bottom: 40px;
+
       .form-control {
-        width: 500px;
-        background: transparent;
         border: none;
         outline: none;
-        border-bottom: 1px solid $secondary-color;
-        color: #fff;
-        font-size: 20px;
-        margin-bottom: 1rem;
-        font-family: inherit;
-      }
-      input {
-        height: 45px;
-        &::placeholder {
-          color: #fff;
-        }
-      }
-      textarea::placeholder {
-        color: #fff;
-      }
-      .submit {
-        background: $secondary-color;
-        border-color: transparent;
-        color: $primary-color;
-        font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 2px;
+        border-bottom: 1px solid #fff;
+        display: block;
+        width: 100%;
         height: 50px;
-        margin-top: 20px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        &:hover {
-          background: darken($secondary-color, 10);
-          color: #fff;
-          cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        background: none;
+        transition: all 0.3s ease;
+        &:focus,
+        &:valid {
+          border-bottom: 2px solid $primary-color;
+          & + span {
+            transform: translateY(-2.2rem) scale(0.8);
+            color: #000;
+          }
         }
+      }
+
+      span {
+        font-size: 20px;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        transform-origin: 0 0;
+        cursor: text;
+        transition: all 0.3s ease;
+      }
+
+      textarea.form-control {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        margin-top: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+
+    .submit {
+      padding: 0.5rem 1rem;
+      background: $secondary-color;
+      border-color: transparent;
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 50px;
+      margin-top: 50px !important;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      &:hover {
+        background: darken($secondary-color, 10);
+        color: #fff;
+        cursor: pointer;
       }
     }
   }
