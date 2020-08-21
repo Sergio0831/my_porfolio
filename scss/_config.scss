@@ -1,5 +1,11 @@
-$primary-color: #00263b;
-$secondary-color: #fcbf1e; // #eece1a
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+// Variables
+$open-sans: "Open Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+$primary-color: #222;
+$secondary-color: #0f0; // #eece1a
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.7;

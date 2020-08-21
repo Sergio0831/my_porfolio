@@ -25,19 +25,19 @@
         </div>
         <ul class="menu-nav">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">About Me</a>
+            <a href="about" class="nav-link">About Me</a>
           </li>
           <li class="nav-item">
-            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="projects" class="nav-link">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="skills.html" class="nav-link">My Skills</a>
+            <a href="skills" class="nav-link">My Skills</a>
           </li>
           <li class="nav-item current">
-            <a href="contact.html" class="nav-link">Contact Me</a>
+            <a href="contact" class="nav-link">Contact Me</a>
           </li>
         </ul>
       </nav>
@@ -50,22 +50,43 @@
         This is how you can contact me...
       </h2>
 
+      <div class="form-message"></div>
+
       <!-- Contact Form -->
       <div class="contact-form">
-        <form action="">
+        <form action="ajax/mail.php" id="form" method="POST">
           <label class="form-group">
-            <input type="text" class="form-control" name="name" required />
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              name="name"
+              required
+            />
             <span>Your Name</span>
           </label>
           <label class="form-group">
-            <input type="text" class="form-control" name="email" required />
+            <input
+              type="text"
+              id="email"
+              class="form-control"
+              name="email"
+              required
+            />
             <span>Your Email</span>
           </label>
           <label class="form-group">
-            <textarea name="message" class="form-control" required></textarea>
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              required
+            ></textarea>
             <span for="">Message</span>
           </label>
-          <a href="#" type="submit" class="submit">Send Message</a>
+          <button class="submit" id="sendMail" name="button" type="submit">
+            SEND
+          </button>
         </form>
       </div>
     </main>
@@ -73,6 +94,9 @@
       Copyright &copy; 2020
     </footer>
 
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/formMail.js"></script>
   </body>
 </html>

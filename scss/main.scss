@@ -11,7 +11,8 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: $roboto;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -20,7 +21,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   &.lg-heading {
     font-size: 4rem;
   }
@@ -37,7 +38,7 @@ a {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 
@@ -128,17 +129,11 @@ main {
   img {
     width: 100%;
     height: auto;
-    border: 3px #fff solid;
+    border: 2px #fff solid;
     &:hover {
       opacity: 0.5;
       @include easeOut;
       border-color: $secondary-color;
-      // box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.7);
-      // transform: translate(-0.8rem, -0.8rem);
-      // -webkit-transform: translate(-0.8rem, -0.8rem);
-      // -moz-transform: translate(-0.8rem, -0.8rem);
-      // -ms-transform: translate(-0.8rem, -0.8rem);
-      // -o-transform: translate(-0.8rem, -0.8rem);
     }
   }
 }
@@ -146,14 +141,14 @@ main {
 // Skills Page
 #skills {
   .skills-section {
-    margin-top: 4rem;
+    margin: 4rem auto;
     font-size: 1.3rem;
     width: 90%;
     max-width: 1000px;
     .what {
       text-align: start;
       margin: 1rem 0 0.1rem 0.75rem;
-      font-weight: bold;
+      font-weight: 400;
     }
     .skill-container {
       background-color: lighten($primary-color, 10);
@@ -177,7 +172,7 @@ main {
         margin: auto;
         color: $primary-color;
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: 400;
       }
     }
     .s1 {
@@ -219,7 +214,7 @@ main {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    background: #00476e;
+    background: lighten($primary-color, 10);
     padding: 40px 30px;
     border-radius: 5px;
 
@@ -232,7 +227,7 @@ main {
       .form-control {
         border: none;
         outline: none;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $secondary-color;
         display: block;
         width: 100%;
         height: 50px;
@@ -252,7 +247,7 @@ main {
 
       span {
         font-size: 20px;
-        color: #fff;
+        color: $secondary-color;
         position: absolute;
         top: 15px;
         transform-origin: 0 0;
@@ -264,20 +259,22 @@ main {
         padding-top: 20px;
         padding-bottom: 15px;
         margin-top: 20px;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: $roboto;
       }
     }
 
-    .submit {
+    #sendMail {
+      width: 100%;
+      outline: none;
+      position: relative;
       padding: 0.5rem 1rem;
-      background: $secondary-color;
-      border-color: transparent;
-      color: $primary-color;
+      background: none;
+      border: 1px solid $secondary-color;
+      color: #fff;
+      overflow: hidden;
+      cursor: pointer;
       font-size: 20px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      height: 50px;
-      margin-top: 50px !important;
+      font-weight: 400;
       border-radius: 5px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -285,13 +282,54 @@ main {
       -o-border-radius: 5px;
       text-transform: uppercase;
       letter-spacing: 2px;
+      @include easeOut;
+      z-index: 1;
       &:hover {
-        background: darken($secondary-color, 10);
-        color: #fff;
-        cursor: pointer;
+        background: $secondary-color;
       }
     }
   }
+}
+
+.alert-success {
+  max-width: 500px;
+  background: $secondary-color;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: none;
+  h3 {
+    color: $primary-color;
+    font-weight: 500;
+  }
+  p {
+    margin: 0;
+    color: $primary-color;
+    font-weight: 500;
+  }
+}
+.alert-warning {
+  max-width: 500px;
+  background: red;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: none;
 }
 
 // Button Style
@@ -300,9 +338,9 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  @include easeOut;
   &:hover {
     background: $secondary-color;
-    color: $primary-color;
   }
 }
 
@@ -310,12 +348,14 @@ main {
   @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
+  @include easeOut;
 }
 
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
+  @include easeOut;
 }
 
 #main-footer {
