@@ -14,9 +14,6 @@ if (isset($_POST['submit'])) {
   if (empty($name) || empty($email) || empty($message)) {
     echo "<div class='alert-warning' style='display:block;'>Please fill in all fields.</div>";
   }
-  elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "<div class='alert-warning' style='display:block;'>Please write a valid e-mail address!</div>";
-  }
   else {
     echo mail("sergejs.ivcenko@inbox.lv", $subject, $message, $headers);
     echo "<div class='alert-success' style='display:block;'>
