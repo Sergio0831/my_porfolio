@@ -17,19 +17,11 @@
   // Rotate btn X
   &.close {
     transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
 
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
-        -webkit-transform: rotate(45deg) translate(5px, 5px);
-        -moz-transform: rotate(45deg) translate(5px, 5px);
-        -ms-transform: rotate(45deg) translate(5px, 5px);
-        -o-transform: rotate(45deg) translate(5px, 5px);
       }
       // Line 2 - Hide
       &:nth-child(2) {
@@ -38,10 +30,6 @@
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
-        -webkit-transform: rotate(-45deg) translate(6px, -6px);
-        -moz-transform: rotate(-45deg) translate(6px, -6px);
-        -ms-transform: rotate(-45deg) translate(6px, -6px);
-        -o-transform: rotate(-45deg) translate(6px, -6px);
       }
     }
   }
@@ -76,17 +64,9 @@
     background: rgba(darken($primary-color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    -webkit-transform: translate3d(0, -100%, 0);
-    -moz-transform: translate3d(0, -100%, 0);
-    -ms-transform: translate3d(0, -100%, 0);
-    -o-transform: translate3d(0, -100%, 0);
     @include easeOut;
     &.show {
       transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
     }
   }
 
@@ -95,17 +75,9 @@
     background: rgba($primary-color, 0.9);
     @include easeOut;
     transform: translate3d(0, 100%, 0);
-    -webkit-transform: translate3d(0, 100%, 0);
-    -moz-transform: translate3d(0, 100%, 0);
-    -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
 
     &.show {
       transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
     }
 
     .portrait {
@@ -115,10 +87,6 @@
       background-position: center;
       background-size: cover;
       border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
       border: solid 3px $secondary-color;
     }
   }
@@ -126,16 +94,8 @@
   .nav-item {
     @include easeOut;
     transform: translate3d(600px, 0, 0);
-    -webkit-transform: translate3d(600px, 0, 0);
-    -moz-transform: translate3d(600px, 0, 0);
-    -ms-transform: translate3d(600px, 0, 0);
-    -o-transform: translate3d(600px, 0, 0);
     &.show {
       transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
     }
 
     &.current > a {
