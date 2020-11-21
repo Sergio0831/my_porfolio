@@ -1,0 +1,49 @@
+// About Page
+#about {
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+      "bioimage bio bio"
+      "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mediaLg {
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
+      grid-template-columns: 1fr;
+    }
+  }
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+  }
+  .bio {
+    grid-area: bio;
+  }
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 5px solid $secondary-color;
+    &-line {
+      width: 20%;
+      border-color: $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  @include mediaLg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mediaMd {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 2px #fff solid;
+    &:hover {
+      opacity: 0.5;
+      @include easeOut;
+      border-color: $secondary-color;
+    }
+  }
+}

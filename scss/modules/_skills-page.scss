@@ -1,0 +1,73 @@
+// Skills Page
+#skills {
+  .skills-section {
+    margin: 4rem auto;
+    font-size: 1.3rem;
+    width: 90%;
+    max-width: 1000px;
+
+    @include mediaSm {
+      font-size: 1.2rem;
+    }
+
+    .what {
+      text-align: start;
+      margin: 1rem 0 0.1rem 0.75rem;
+      font-weight: 400;
+    }
+    .skill-container {
+      background-color: lighten($primary-color, 10);
+      border-radius: 1rem;
+      height: 30px;
+
+      @include mediaSm {
+        height: 25px;
+      }
+    }
+    .skill {
+      display: flex;
+      height: 100%;
+      background-color: $secondary-color;
+      border-radius: 1rem;
+      span {
+        margin: auto;
+        color: $primary-color;
+        font-size: 1.2rem;
+        font-weight: 400;
+        @include mediaSm {
+          font-size: 1rem;
+        }
+      }
+    }
+    .s1 {
+      width: 80%;
+    }
+    .s2 {
+      width: 70%;
+    }
+    .s3 {
+      width: 30%;
+    }
+    .s4 {
+      width: 20%;
+    }
+    .s5 {
+      width: 60%;
+    }
+    .s6 {
+      width: 50%;
+    }
+    .s7 {
+      width: 50%;
+    }
+    .load {
+      animation: loading 1s linear;
+      -webkit-animation: loading 1s linear;
+      @keyframes loading {
+        0% {
+          width: 0%;
+        }
+      }
+    }
+  }
+}
