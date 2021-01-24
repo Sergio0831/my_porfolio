@@ -9,7 +9,7 @@
     "prefix:css": "postcss dist/css/main.min.css --use=autoprefixer --map=false --output=dist/css/main.min.css",
     "clean": "rimraf dist/css",
     "dev": "cd dist & live-server --port=3000",
-    "start": "npm-run-all --parallel clean devserver watch:sass compile:sass prefix:css",
+    "start": "npm-run-all --parallel clean dev watch:sass compile:sass prefix:css",
     "build": "npm-run-all clean compile:sass prefix:css"
   },
   "browserslist": [

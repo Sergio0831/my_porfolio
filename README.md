@@ -2,6 +2,6 @@
 
 ## Added New Project
 
-www.oksanatazova.lv
+https://coronavirus-statistic.netlify.app/
 
 :clap: :clap: :clap:

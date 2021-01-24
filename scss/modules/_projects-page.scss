@@ -13,8 +13,9 @@
 
   img {
     width: 100%;
-    height: auto;
+    // height: auto;
     border: 2px #fff solid;
+
     &:hover {
       opacity: 0.5;
       @include easeOut;
