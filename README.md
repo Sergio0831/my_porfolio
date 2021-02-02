@@ -2,6 +2,6 @@
 
 ## Added New Project
 
-https://coronavirus-statistic.netlify.app/
+https://my-house.netlify.app/
 
 :clap: :clap: :clap:
