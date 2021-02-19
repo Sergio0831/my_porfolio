@@ -1,7 +1,13 @@
 # My Portfolio
 
-## Added New Project
+## Added Two New Project
 
-https://coronavirus-statistic.netlify.app/
+### JavaScript Todo App
+
+https://sergejs-todo-app.netlify.app
+
+### Breaking News with NY Times API
+
+https://breaking-news.netlify.app
 
 :clap: :clap: :clap:
