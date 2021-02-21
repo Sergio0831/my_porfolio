@@ -13,11 +13,5 @@
 
 	img {
 		width: 100%;
-		border: 1px #fff solid;
-		@include easeOut;
-
-		&:hover {
-			border-color: $secondary-color;
-		}
 	}
 }
