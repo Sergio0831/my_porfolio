@@ -45,11 +45,11 @@
 			<h2 class="lg-heading">Contact <span>Me</span></h2>
 			<h3 class="sm-heading">This is how you can contact me...</h3>
 
-			<div class="form-message"></div>
+			<div class="alert-success">Your message has been successfully sent.</div>
 
 			<!-- Contact Form -->
 			<div class="contact-form">
-				<form action="ajax/mail.php" id="form" method="POST">
+				<form id="form" autocomplete="off">
 					<label class="form-group">
 						<input
 							type="text"
@@ -88,8 +88,15 @@
 		<footer id="main-footer">Copyright &copy; 2020</footer>
 
 		<!-- Script -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init('user_FaHHUXKV1zWO8JrquaQOq');
+			})();
+		</script>
 		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/formMail.js"></script>
 	</body>
 </html>

@@ -1,13 +1,11 @@
 # My Portfolio
 
-## Added Two New Project
+## Added New Project
 
-### JavaScript Todo App
+### Officelite coming soon site
 
-https://sergejs-todo-app.netlify.app
-
-### Breaking News with NY Times API
-
-https://breaking-news.netlify.app
+https://officelite.netlify.app/
 
 :clap: :clap: :clap:
+
+(./preview.jpg)
