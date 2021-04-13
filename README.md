@@ -2,9 +2,9 @@
 
 ## Added New Project
 
-### Officelite coming soon site
+### Bookmark Landing Page
 
-https://officelite.netlify.app/
+https://sergejs-bookmark.netlify.app/
 
 :clap: :clap: :clap:
 
