@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="My Portfolio" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Portfolio" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<title>Contact</title>
-	</head>
-	<body>
-		<header>
-			<div class="menu-btn">
-				<div class="btn-line"></div>
-				<div class="btn-line"></div>
-				<div class="btn-line"></div>
-			</div>
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
 
-			<nav class="menu">
-				<div class="menu-branding">
-					<div class="portrait"></div>
-				</div>
-				<ul class="menu-nav">
-					<li class="nav-item">
-						<a href="home.html" class="nav-link">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="about.html" class="nav-link">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a href="projects.html" class="nav-link">Projects</a>
-					</li>
-					<li class="nav-item">
-						<a href="skills.html" class="nav-link">My Skills</a>
-					</li>
-					<li class="nav-item current">
-						<a href="contact.html" class="nav-link">Contact Me</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<link rel="stylesheet" href="css/main.min.css" />
-		<!-- Contact Page -->
-		<main id="contact">
-			<h2 class="lg-heading">Contact <span>Me</span></h2>
-			<h3 class="sm-heading">This is how you can contact me...</h3>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="skills.html" class="nav-link">My Skills</a>
+          </li>
+          <li class="nav-item current">
+            <a href="contact.html" class="nav-link">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <!-- Contact Page -->
+    <main id="contact">
+      <h2 class="lg-heading">Contact <span>Me</span></h2>
+      <h3 class="sm-heading">This is how you can contact me...</h3>
 
-			<div class="alert-success">Your message has been successfully sent.</div>
+      <div class="alert-success">Your message has been successfully sent.</div>
 
-			<!-- Contact Form -->
-			<div class="contact-form">
-				<form id="form" autocomplete="off">
-					<label class="form-group">
-						<input
-							type="text"
-							id="name"
-							class="form-control"
-							name="name"
-							required
-						/>
-						<span>Your Name</span>
-					</label>
-					<label class="form-group">
-						<input
-							type="email"
-							id="email"
-							class="form-control"
-							name="email"
-							required
-						/>
-						<span>Your Email</span>
-					</label>
-					<label class="form-group">
-						<textarea
-							name="message"
-							id="message"
-							class="form-control"
-							required
-						></textarea>
-						<span for="">Message</span>
-					</label>
-					<button class="submit" id="sendMail" name="button" type="submit">
-						SEND
-					</button>
-				</form>
-			</div>
-		</main>
-		<footer id="main-footer">Copyright &copy; 2020</footer>
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form id="form" autocomplete="off">
+          <label class="form-group">
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              name="name"
+              required
+            />
+            <span>Your Name</span>
+          </label>
+          <label class="form-group">
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              name="email"
+              required
+            />
+            <span>Your Email</span>
+          </label>
+          <label class="form-group">
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              required
+            ></textarea>
+            <span for="">Message</span>
+          </label>
+          <button class="submit" id="sendMail" name="button" type="submit">
+            SEND
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer id="main-footer">Copyright &copy; 2021</footer>
 
-		<!-- Script -->
-		<script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-		></script>
-		<script type="text/javascript">
-			(function () {
-				emailjs.init('user_FaHHUXKV1zWO8JrquaQOq');
-			})();
-		</script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+    <!-- Script -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_FaHHUXKV1zWO8JrquaQOq");
+      })();
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
